@@ -6,7 +6,7 @@ namespace Unwired.Domain.Abstractions.Interfaces;
 public interface IURepository<TEntity> : IDisposable where TEntity : class
 {
     Task<TEntity> GetById(Guid id, bool tracking = false);
-    IQueryable<TEntity> GetAll(ICollection<USort> sort = null);
+    IQueryable<TEntity> GetAll(ICollection<USort> sort = null, string filter = "");
     IQueryable<TEntity> GetBy(Expression<Func<TEntity, bool>> predicate, ICollection<USort> sort = null);
     Task Add(TEntity obj);        
     Task Add(ICollection<TEntity> entities);
