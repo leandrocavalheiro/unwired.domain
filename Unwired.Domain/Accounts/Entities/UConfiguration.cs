@@ -34,7 +34,7 @@ public class UConfiguration : UEntity
     /// <param name="createdAt"></param>    
     /// <param name="originTable"></param>
     /// <param name="fieldName"></param>
-    public UConfiguration(Guid id, string key, string description, string value, string fieldType, Guid? tenantId, Guid? accountId, Guid createdById, DateTime? createdAt = null, string originTable = "", string fieldName = "") : base(id, createdAt, tenantId, accountId, createdById)
+    public UConfiguration(Guid id, string key, string description, string value, string fieldType, Guid? tenantId, Guid? accountId, Guid? createdById, DateTime? createdAt = null, string originTable = "", string fieldName = "") : base(id, createdAt, tenantId, accountId, createdById)
     {
         Key = key;
         Description = description;
